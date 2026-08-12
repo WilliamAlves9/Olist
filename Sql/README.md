@@ -7,6 +7,24 @@ Análise exploratória em **SQL Server (T-SQL)** do dataset público da Olist (m
 
 ---
 
+## 🔎 Insight: taxa de recompra dos clientes
+
+Um dos achados mais relevantes da análise: de **96.096 clientes únicos** (`customer_unique_id`), apenas **2.997 (≈3,1%)** fizeram mais de uma compra no período coberto pelo dataset — os outros **93.099 (≈96,9%)** compraram uma única vez.
+
+```sql
+select
+t2.customer_unique_id
+,count(t1.order_id) as qtd_pedidos
+from olist_orders_dataset as t1
+inner join olist_customers_dataset as t2 on t2.customer_id = t1.customer_id
+group by t2.customer_unique_id
+having count(t1.order_id) > 1
+```
+
+Isso indica uma **taxa de recompra muito baixa**, o que é um ponto de atenção relevante para o negócio — sugere oportunidade de ações de retenção/fidelização. Vale a ressalva: como o dataset cobre uma janela de tempo limitada, esse número reflete recompra *dentro do período observado*, não necessariamente o comportamento vitalício do cliente — clientes marcados como "únicos" podem ter comprado novamente fora da janela de dados disponível.
+
+---
+
 ## 🎯 Objetivo
 
 Responder perguntas de negócio sobre um marketplace de e-commerce usando apenas SQL: quais categorias geram mais receita, como os clientes se comportam ao longo do tempo, e o quanto a logística de entrega impacta o negócio.
