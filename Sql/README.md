@@ -9,7 +9,7 @@ Análise exploratória em **SQL Server (T-SQL)** do dataset público da Olist (m
 
 ## 🔎 Insight: taxa de recompra dos clientes
 
-Um dos achados mais relevantes da análise: de **96.096 clientes únicos** (`customer_unique_id`), apenas **2.997 (≈3,1%)** fizeram mais de uma compra no período coberto pelo dataset — os outros **93.099 (≈96,9%)** compraram uma única vez.
+Um dos achados mais relevantes da análise: de **96.096 clientes únicos** (`customer_unique_id`), apenas **2.997 (3,1%)** fizeram mais de uma compra no período coberto pelo dataset os outros **93.099 (96,9%)** compraram uma única vez.
 
 ```sql
 select
@@ -21,7 +21,7 @@ group by t2.customer_unique_id
 having count(t1.order_id) > 1
 ```
 
-Isso indica uma **taxa de recompra muito baixa**, o que é um ponto de atenção relevante para o negócio — sugere oportunidade de ações de retenção/fidelização. Vale a ressalva: como o dataset cobre uma janela de tempo limitada, esse número reflete recompra *dentro do período observado*, não necessariamente o comportamento vitalício do cliente — clientes marcados como "únicos" podem ter comprado novamente fora da janela de dados disponível.
+Isso indica uma **taxa de recompra muito baixa**, o que é um ponto de atenção relevante para o negócio sugere oportunidade de ações de retenção/fidelização. Vale a ressalva: como o dataset cobre uma janela de tempo limitada, esse número reflete recompra *dentro do período observado*, não necessariamente o comportamento vitalício do cliente clientes marcados como "únicos" podem ter comprado novamente fora da janela de dados disponível.
 
 ---
 
@@ -36,7 +36,7 @@ O dataset é composto por múltiplas tabelas relacionadas por `order_id` / `cust
 | Tabela | Conteúdo |
 |---|---|
 | `olist_orders_dataset` | Pedidos, status e datas (compra, aprovação, entrega) |
-| `olist_order_items_dataset` | Itens do pedido — preço e frete |
+| `olist_order_items_dataset` | Itens do pedido, preço e frete |
 | `olist_order_payments_dataset` | Tipo de pagamento, parcelas e valor |
 | `olist_order_reviews_dataset` | Avaliações da loja |
 | `olist_products_dataset` | Categoria e medidas do produto |
@@ -45,11 +45,11 @@ O dataset é composto por múltiplas tabelas relacionadas por `order_id` / `cust
 | `olist_geolocation_dataset` | Dados de geolocalização |
 | `product_category_name_translation` | Tradução dos nomes de categoria |
 
-Antes de qualquer análise, o modelo não tinha chaves primárias/estrangeiras definidas — isso foi o primeiro passo (`Analise_inicial.sql`), criando a PK em `olist_order_reviews_dataset` e as FKs de `order_payments` e `order_items` para `orders`, garantindo integridade referencial para os joins seguintes.
+Antes de qualquer análise, o modelo não tinha chaves primárias/estrangeiras definidas isso foi o primeiro passo (`Analise_inicial.sql`), criando a PK em `olist_order_reviews_dataset` e as FKs de `order_payments` e `order_items` para `orders`, garantindo integridade referencial para os joins seguintes.
 
 ## 🔑 Desafio técnico: `customer_id` x `customer_unique_id`
 
-Um ponto que passa despercebido em uma primeira olhada no dataset: **cada pedido gera um `customer_id` novo**, mesmo que seja o mesmo cliente comprando de novo. Analisar por `customer_id` faz **todo cliente parecer que comprou uma única vez** — o que quebra qualquer análise de recorrência, LTV ou ticket médio por cliente.
+Um ponto que passa despercebido em uma primeira olhada no dataset: **cada pedido gera um `customer_id` novo**, mesmo que seja o mesmo cliente comprando de novo. Analisar por `customer_id` faz **todo cliente parecer que comprou uma única vez** o que quebra qualquer análise de recorrência, LTV ou ticket médio por cliente.
 
 A solução foi identificar o `customer_unique_id` (que identifica a pessoa de fato, não o pedido) e usar ele como chave de agrupamento nas análises de comportamento do cliente:
 
