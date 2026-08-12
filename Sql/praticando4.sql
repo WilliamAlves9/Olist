@@ -49,8 +49,8 @@ with faturamentoMensal as (
         datefromparts(year(order_approved_at), month(order_approved_at), 1) as mes_ano,
         sum(price) as faturamento_mes
     from olist_orders_dataset as t1
-    inner join olist_order_items_dataset asa t2 on t2.order_id = t1.order_id
-    where order_approved_at IS NOT NULL
+    inner join olist_order_items_dataset as t2 on t2.order_id = t1.order_id
+    where order_approved_at is not null
     group by year(order_approved_at), month(order_approved_at)
 )
 select 
@@ -94,7 +94,7 @@ trimestre as
     select
     ano_mes
     ,faturamento
-    ,sum(faturamento) over(order by ano_mes ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) as faturamento_trimestre
+    ,sum(faturamento) over(order by ano_mes rows between 2 preceding and current row) as faturamento_trimestre
     from faturamentoMensal
 )
 select
