@@ -56,14 +56,14 @@ Foco no impacto da entrega na experiência do cliente: média de atraso por nota
 
 ## 🧱 Modelagem de dados
 
-A classificação ABC de clientes **não foi construída dentro do Power BI** — ela vem da camada SQL, onde os clientes já foram classificados por faixa de faturamento. No modelo do Power BI, essa informação entra como uma tabela separada (contendo `customer_unique_id`, percentual e classe) e é relacionada à tabela de dados dos clientes através do `customer_unique_id` — o mesmo identificador usado para resolver a duplicidade de `customer_id` por pedido, mantendo consistência entre a camada SQL e a camada de BI.
+A classificação ABC de clientes **não foi construída dentro do Power BI** — ela vem da camada SQL, onde os clientes já foram classificados por faixa de faturamento. No modelo do Power BI, essa informação entra como uma tabela separada (contendo `customer_unique_id`, percentual e classe) e é relacionada à tabela de dados dos clientes através do `customer_unique_id` o mesmo identificador usado para resolver a duplicidade de `customer_id` por pedido, mantendo consistência entre a camada SQL e a camada de BI.
 
 ## 🔎 Principais insights
 
-- **Recorrência baixa**: apenas 3,12% dos clientes fizeram mais de uma compra no período — consistente com o achado já identificado na análise SQL (2.997 de 96.096 clientes).
+- **Recorrência baixa**: apenas 3,12% dos clientes fizeram mais de uma compra no período consistente com o achado já identificado na análise SQL (2.997 de 96.096 clientes).
 - **Concentração de receita (Pareto)**: 44,5% dos clientes (Classe A) geram quase 80% do faturamento total.
 - **Atraso impacta satisfação**: quanto maior o atraso na entrega, menor a nota média da avaliação.
-- **Concentração geográfica**: São Paulo lidera isoladamente em faturamento, quantidade de clientes e de vendedores — o Sudeste domina o volume do marketplace.
+- **Concentração geográfica**: São Paulo lidera isoladamente em faturamento, quantidade de clientes e de vendedores o Sudeste domina o volume do marketplace.
 - **Meio de pagamento**: cartão de crédito é o método amplamente predominante entre os clientes.
 
 ## 🛠️ Tecnologias
