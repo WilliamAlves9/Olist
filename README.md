@@ -1,4 +1,4 @@
-# 📊 Análise de Dados de E-commerce — Dataset Olist
+# 📊 Análise de Dados de E-commerce - Dataset Olist
 
 Projeto de portfólio com análise de dados de um marketplace de e-commerce brasileiro (dataset público da Olist), cobrindo tratamento e exploração dos dados em **SQL Server** e visualização em **Power BI**. O objetivo é identificar oportunidades de negócio a partir do comportamento de clientes, vendas e logística de entrega.
 
@@ -50,13 +50,13 @@ Página dedicada ao comportamento do cliente: faturamento e ticket médio por cl
 
 Foco no impacto da entrega na experiência do cliente: média de atraso por nota de avaliação, quantidade de vendedores por estado, atraso médio e quantidade de pedidos por cidade, status geral dos pedidos e média de frete por estado.
 
-**Leitura rápida:** o gráfico "Média de atraso por avaliação" mostra uma relação praticamente inversa entre atraso e nota — pedidos com nota 1 têm em média ~4 dias de atraso, enquanto pedidos com nota 5 têm atraso próximo de zero. Isso sugere que o tempo de entrega é um fator relevante na satisfação do cliente.
+**Leitura rápida:** o gráfico "Média de atraso por avaliação" mostra uma relação praticamente inversa entre atraso e nota pedidos com nota 1 têm em média ~4 dias de atraso, enquanto pedidos com nota 5 têm atraso próximo de zero. Isso sugere que o tempo de entrega é um fator relevante na satisfação do cliente.
 
 ---
 
 ## 🧱 Modelagem de dados
 
-A classificação ABC de clientes **não foi construída dentro do Power BI** — ela vem da camada SQL, onde os clientes já foram classificados por faixa de faturamento. No modelo do Power BI, essa informação entra como uma tabela separada (contendo `customer_unique_id`, percentual e classe) e é relacionada à tabela de dados dos clientes através do `customer_unique_id` o mesmo identificador usado para resolver a duplicidade de `customer_id` por pedido, mantendo consistência entre a camada SQL e a camada de BI.
+A classificação ABC de clientes **não foi construída dentro do Power BI** ela vem da camada SQL, onde os clientes já foram classificados por faixa de faturamento. No modelo do Power BI, essa informação entra como uma tabela separada (contendo `customer_unique_id`, percentual e classe) e é relacionada à tabela de dados dos clientes através do `customer_unique_id` o mesmo identificador usado para resolver a duplicidade de `customer_id` por pedido, mantendo consistência entre a camada SQL e a camada de BI.
 
 ## 🔎 Principais insights
 
