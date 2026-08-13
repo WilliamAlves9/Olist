@@ -30,7 +30,7 @@ Dashboard interativo construído a partir dos dados já tratados na camada SQL, 
 
 ### 1. Visão Geral
 
-![Visão Geral](./assets/dashboard-visao-geral.png)
+![Visão Geral](./Assets/dashboard-visao-geral.png)
 
 KPIs principais do negócio: faturamento (R$ 1,36 Bi), quantidade de pedidos (99 mil), ticket médio (R$ 13,67 mil) e média de atraso na entrega (0,70 dias). Complementado por evolução mensal de faturamento x quantidade de pedidos, mapa de concentração geográfica das vendas na América do Sul, faturamento por categoria de produto, faturamento por estado (treemap) e tipo de pagamento mais utilizado.
 
@@ -38,7 +38,7 @@ KPIs principais do negócio: faturamento (R$ 1,36 Bi), quantidade de pedidos (99
 
 ### 2. Clientes
 
-![Dashboard Clientes](./assets/dashboard-clientes.png)
+![Dashboard Clientes](./Assets/dashboard-clientes.png)
 
 Página dedicada ao comportamento do cliente: faturamento e ticket médio por cliente, total de clientes (96 mil), média de pedidos por cliente (1,03), média de review (4,09) e **taxa de recorrência (3,12%)**. Também traz distribuição de clientes por estado, percentual de clientes e de faturamento por classe ABC, quantidade de avaliações por nota e o sentimento predominante dos comentários (positivo/neutro/negativo).
 
@@ -46,7 +46,7 @@ Página dedicada ao comportamento do cliente: faturamento e ticket médio por cl
 
 ### 3. Logística
 
-![Dashboard Logística](./assets/dashboard-logistica.png)
+![Dashboard Logística](./Assets/dashboard-logistica.png)
 
 Foco no impacto da entrega na experiência do cliente: média de atraso por nota de avaliação, quantidade de vendedores por estado, atraso médio e quantidade de pedidos por cidade, status geral dos pedidos e média de frete por estado.
 
