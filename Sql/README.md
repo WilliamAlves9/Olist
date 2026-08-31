@@ -105,10 +105,10 @@ order by faturamento desc
 | Arquivo | Conteúdo |
 |---|---|
 | `Analise_inicial.sql` | Mapeamento das tabelas e definição de chaves primárias/estrangeiras |
-| `praticando1.sql` | Receita por categoria, ticket médio, vendas por estado/cidade |
-| `praticando2.sql` | Comportamento de clientes, recorrência, frete e crescimento por categoria |
-| `praticando3.sql` | Análises de tempo de entrega e atraso logístico |
-| `praticando4.sql` | Séries temporais: faturamento mensal, média móvel, ranking e trimestres |
+| `1 - vendas.sql` | Receita por categoria, ticket médio, vendas por estado/cidade |
+| `2 - clientes.sql` | Comportamento de clientes, recorrência, frete e crescimento por categoria |
+| `3 - logistica.sql` | Análises de tempo de entrega e atraso logístico |
+| `4 - analise temporal.sql` | Séries temporais: faturamento mensal, média móvel, ranking e trimestres |
 
 ## 🛠️ Tecnologias
 
@@ -117,4 +117,4 @@ order by faturamento desc
 
 ---
 
-<sub>Este projeto faz parte do meu portfólio de transição para Análise de Dados. A camada de visualização (Power BI) está disponível em prints/documentação neste mesmo repositório.</sub>
+<sub>Este projeto foi feito como prática durante minha transição para Análise de Dados. A camada de visualização (Power BI) está disponível em prints/documentação neste mesmo repositório.</sub>
