@@ -30,7 +30,7 @@ Dashboard interativo construído a partir dos dados já tratados na camada SQL, 
 
 ### 1. Visão Geral
 
-![Visão Geral](assets/dashboard-visao-geral.png)
+![Visão Geral](./assets/dashboard-visao-geral.png)
 
 KPIs principais do negócio: faturamento (R$ 1,36 Bi), quantidade de pedidos (99 mil), ticket médio (R$ 13,67 mil) e média de atraso na entrega (0,70 dias). Complementado por evolução mensal de faturamento x quantidade de pedidos, mapa de concentração geográfica das vendas na América do Sul, faturamento por categoria de produto, faturamento por estado (treemap) e tipo de pagamento mais utilizado.
 
