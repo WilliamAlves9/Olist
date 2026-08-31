@@ -1,6 +1,6 @@
 # 📊 Análise de Dados de E-commerce - Dataset Olist
 
-Projeto de portfólio com análise de dados de um marketplace de e-commerce brasileiro (dataset público da Olist), cobrindo tratamento e exploração dos dados em **SQL Server** e visualização em **Power BI**. O objetivo é identificar oportunidades de negócio a partir do comportamento de clientes, vendas e logística de entrega.
+Projeto de prática com análise de dados de um marketplace de e-commerce brasileiro (dataset público da Olist), cobrindo tratamento e exploração dos dados em **SQL Server** e visualização em **Power BI**. O objetivo foi treinar habilidades de análise de dados a partir do comportamento de clientes, vendas e logística de entrega.
 
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
@@ -14,10 +14,10 @@ olist/
 └── sql/
     ├── README.md              ← documentação técnica da camada SQL
     ├── Analise_inicial.sql
-    ├── praticando1.sql
-    ├── praticando2.sql
-    ├── praticando3.sql
-    └── praticando4.sql
+    ├── 1 - vendas.sql
+    ├── 2 - clientes.sql
+    ├── 3 - logistica.sql
+    └── 4 - analise temporal.sql
 ```
 
 > 🔗 O tratamento e a modelagem dos dados em SQL (incluindo a resolução do `customer_id` x `customer_unique_id`) estão documentados em [`sql/README.md`](./sql/README.md).
@@ -30,7 +30,7 @@ Dashboard interativo construído a partir dos dados já tratados na camada SQL, 
 
 ### 1. Visão Geral
 
-![Visão Geral](./Assets/dashboard-visao-geral.png)
+![Visão Geral](./assets/dashboard-visao-geral.png)
 
 KPIs principais do negócio: faturamento (R$ 1,36 Bi), quantidade de pedidos (99 mil), ticket médio (R$ 13,67 mil) e média de atraso na entrega (0,70 dias). Complementado por evolução mensal de faturamento x quantidade de pedidos, mapa de concentração geográfica das vendas na América do Sul, faturamento por categoria de produto, faturamento por estado (treemap) e tipo de pagamento mais utilizado.
 
@@ -38,7 +38,7 @@ KPIs principais do negócio: faturamento (R$ 1,36 Bi), quantidade de pedidos (99
 
 ### 2. Clientes
 
-![Dashboard Clientes](./Assets/dashboard-clientes.png)
+![Dashboard Clientes](./assets/dashboard-clientes.png)
 
 Página dedicada ao comportamento do cliente: faturamento e ticket médio por cliente, total de clientes (96 mil), média de pedidos por cliente (1,03), média de review (4,09) e **taxa de recorrência (3,12%)**. Também traz distribuição de clientes por estado, percentual de clientes e de faturamento por classe ABC, quantidade de avaliações por nota e o sentimento predominante dos comentários (positivo/neutro/negativo).
 
@@ -46,7 +46,7 @@ Página dedicada ao comportamento do cliente: faturamento e ticket médio por cl
 
 ### 3. Logística
 
-![Dashboard Logística](./Assets/dashboard-logistica.png)
+![Dashboard Logística](./assets/dashboard-logistica.png)
 
 Foco no impacto da entrega na experiência do cliente: média de atraso por nota de avaliação, quantidade de vendedores por estado, atraso médio e quantidade de pedidos por cidade, status geral dos pedidos e média de frete por estado.
 
@@ -76,4 +76,4 @@ A classificação ABC de clientes **não foi construída dentro do Power BI**: e
 
 ---
 
-<sub>Projeto feito para portfólio de transição para Análise de Dados. Documentação técnica completa da camada SQL disponível em <a href="./sql/README.md">sql/README.md</a>.</sub>
+<sub>Projeto de prática feito durante minha transição para Análise de Dados. Documentação técnica completa da camada SQL disponível em <a href="./sql/README.md">sql/README.md</a>.</sub>
