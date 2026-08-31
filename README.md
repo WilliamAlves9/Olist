@@ -1,6 +1,6 @@
 # 📊 Análise de Dados de E-commerce - Dataset Olist
 
-Projeto de prática com análise de dados de um marketplace de e-commerce brasileiro (dataset público da Olist), cobrindo tratamento e exploração dos dados em **SQL Server** e visualização em **Power BI**. O objetivo foi treinar habilidades de análise de dados a partir do comportamento de clientes, vendas e logística de entrega.
+Projeto de prática com análise de dados de um marketplace de e-commerce brasileiro (dataset público da Olist), cobrindo tratamento e exploração dos dados em **SQL Server** e visualização em **Power BI**. O objetivo foi treinar habilidades de análise de dados a partir do comportamento de clientes, vendas e logística de entrega. Alterações visuais ainda estão sendo trabalhadas.
 
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
